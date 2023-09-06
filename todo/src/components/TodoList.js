@@ -1,8 +1,13 @@
+import Todo from "./Todo";
 
-const TodoList = ()=> {
+const TodoList = ({todoList})=> {
     return (
         <div>
-          TodoList  
+          {todoList.map((todoItem) => (
+            <Todo todoItem={todoItem }></Todo>
+          ))}  
         </div>
     )
-};TodoList
+};
+
+export default TodoList; 

@@ -1,13 +1,14 @@
 import styles from '../style.module.css';
+import shortid from 'shortid';
 
 const Form = ({todo, setTodo, todoList, setTodoList})=>{
     const handleChange=(event)=>{
         setTodo(event.target.value);
-        console.log(event.target.value);
+       // console.log(event.target.value);
     };
     const handleSubmit = (event)=>{
         event.preventDefault();
-        setTodoList([...todoList, todo]);
+        setTodoList([...todoList, {name: todo, id: shortid.generate( )}]);
         setTodo("");
     };
     return (
@@ -19,8 +20,7 @@ const Form = ({todo, setTodo, todoList, setTodoList})=>{
                 className={styles.todoinput} 
                 placeholder="Add Todo item"></input>
                 <button type='submit' className={styles.todobotton}>Add</button>
-                <div><h3>{todoList}</h3></div>
-                
+     
             </form>
         </div>
     )
