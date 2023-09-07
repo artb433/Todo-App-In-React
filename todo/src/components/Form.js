@@ -19,8 +19,8 @@ const Form = ({todo, setTodo, todoList, setTodoList})=>{
                 value={todo}
                 onChange={handleChange} 
                 className={styles.todoinput} 
-                placeholder="Add Todo item"></input>
-                <button type='submit' className={styles.todobotton}>Add</button>
+                placeholder="Add Todo"></input>
+                <button type='submit' className={styles.todobutton}>Add</button>
      
             </form>
         </div>
